@@ -1,4 +1,7 @@
 :root {
+  --main-text-color: #434455;
+  --main-title-color: #2e2f42;
+  --main-background-color: #2e2f42;
 }
 
 .visually-hidden {
@@ -18,14 +21,14 @@
 
 body {
   font-family: "Roboto";
-  color: #434455;
+  color: var(--main-text-color);
 }
 
-a {
+.link {
   text-decoration: none;
 }
 
-ul {
+.list {
   list-style: none;
 }
 
@@ -50,34 +53,41 @@ color: #FFFFFF;
   align-items: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #2e2f42;
+  color: var(--main-title-color);
 }
 .header-logo > span {
   color: #4d5ae5;
 }
 
-.header-navigation {
+.header-item {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.5;
-  /* identical to box height, or 150% */
   letter-spacing: 0.02em;
-  /* NAVY BLUE */
-  color: #2e2f42;
+  color: var(--main-title-color);
+}
+.header-link:hover,
+.header-link:focus {
+  color: #404bbf;
 }
 
-.header-contacts {
+
+.header-contact-item {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #434455;
+  color: var(--main-text-color);
   text-decoration: none;
+}
+.header-contact-link:hover,
+.header-contact-link:focus {
+  color: #404bbf;
 }
 
 /* Section 1 Effective Solutions for Your Business */
 .solutions {
-  background: #2e2f42;
+  background: var(--main-title-color);
 }
 .solutions-title {
   font-weight: 700;
@@ -90,14 +100,16 @@ color: #FFFFFF;
 .solution-btn {
   font-weight: 700;
   font-size: 16px;
-  line-height: 19px;
-  /* identical to box height */
-
+  line-height: 1.19;
   display: flex;
   align-items: center;
   letter-spacing: 0.04em;
-
   color: #ffffff;
+  background: #4d5ae5;
+}
+.solution-btn:focus,
+.solution-btn:hover {
+  background: #404bbf;
 }
 
 /* Secrtion 2 Main principles */
@@ -107,14 +119,14 @@ color: #FFFFFF;
 .principles-title {
   font-weight: 500;
   font-size: 20px;
-  line-height: 1.20;
-    letter-spacing: 0.02em;
-  color: #2e2f42;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--main-title-color);
 }
 .principles-text {
   font-size: 16px;
   line-height: 1.5;
-    letter-spacing: 0.02em;
+  letter-spacing: 0.02em;
 }
 
 /* Section 3 What are we doing */
@@ -128,7 +140,7 @@ color: #FFFFFF;
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
-  color: #2e2f42;
+  color: var(--main-title-color);
 }
 .what-list {
 }
@@ -145,7 +157,7 @@ color: #FFFFFF;
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
-  color: #2e2f42;
+  color: var(--main-title-color);
 }
 .team-list {
 }
@@ -159,14 +171,14 @@ color: #FFFFFF;
   line-height: 1.2;
   text-align: center;
   letter-spacing: 0.02em;
-  color: #2e2f42;
+  color: var(--main-title-color);
 }
 .team-position {
   font-size: 16px;
   line-height: 1.5;
   text-align: center;
   letter-spacing: 0.02em;
-  color: #434455;
+  color: var(--main-text-color);
 }
 
 /* Footer section */
@@ -198,4 +210,22 @@ color: #FFFFFF;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+}
+
+.solutions-filter-btn {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #4d5ae5;
+  background: #f4f4fd;
+}
+
+.solutions-filter-btn:hover,
+.solutions-filter-btn:focus {
+    color: #FFFFFF;
+    background: #404BBF;
 }
