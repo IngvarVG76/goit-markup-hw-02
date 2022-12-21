@@ -1,7 +1,12 @@
 :root {
-  --main-text-color: #434455;
-  --main-title-color: #2e2f42;
-  --main-background-color: #2e2f42;
+  --primary-brand-color: #4D5AE5;
+  --pressed-state-color: #404BBF;
+  --dakr-overlays-headings: #2e2f42;
+  --body-text-color: #434455;
+  --subtle-text-color: #8E8F99;
+  --accent-background-color: #E7E9FC;
+  --light-bacground-color: #F4F4FD;
+  --primary-background-color: #ffffff;
 }
 
 .visually-hidden {
@@ -17,11 +22,15 @@
   overflow: hidden;
 }
 
+/* * {
+  color: none;
+} */
+
 /* Body */
 
 body {
-  font-family: "Roboto";
-  color: var(--main-text-color);
+  font-family: "Roboto", sans-serif;
+  color: var(--body-text-color);
 }
 
 .link {
@@ -32,61 +41,55 @@ body {
   list-style: none;
 }
 
-/* .btn {
-font-weight: 700;
-font-size: 16px;
-line-height: 19px;
-display: flex;
-align-items: center;
-letter-spacing: 0.04em;
-color: #FFFFFF;
-} */
+
 
 /* Header */
+.header {
+  background-color: var(--primary-background-color);
+}
 .header-logo {
-  font-family: "Raleway";
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
   line-height: calc(24 / 18);
-  display: flex;
-  align-items: center;
+
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--main-title-color);
+  color: var(--dakr-overlays-headings);
 }
 .header-logo > span {
-  color: #4d5ae5;
+  color: var(--primary-brand-color);
 }
 
-.header-item {
+.header-link {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: var(--main-title-color);
+  color: var(--dakr-overlays-headings);
 }
 .header-link:hover,
 .header-link:focus {
-  color: #404bbf;
+  color: var(--pressed-state-color);
 }
 
-.header-contact-item {
+.header-contact-link {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: var(--main-text-color);
+  color: var(--body-text-color);
   text-decoration: none;
 }
 .header-contact-link:hover,
 .header-contact-link:focus {
-  color: #404bbf;
+  color: var(--pressed-state-color);
 }
 
 /* Section 1 Effective Solutions for Your Business */
 .solutions {
-  background: var(--main-title-color);
+  background-color: var(--dakr-overlays-headings);
 }
 .solutions-title {
   font-weight: 700;
@@ -94,33 +97,34 @@ color: #FFFFFF;
   line-height: 1.07;
   text-align: center;
   letter-spacing: 0.02em;
-  color: #ffffff;
+  color: var(--primary-background-color);
 }
 .solution-btn {
+  font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.19;
-  display: flex;
-  align-items: center;
   letter-spacing: 0.04em;
-  color: #ffffff;
-  background: #4d5ae5;
+  color: var(--primary-background-color);
+  background-color: var(--primary-brand-color);
+  cursor: pointer;
 }
 .solution-btn:focus,
 .solution-btn:hover {
-  background: #404bbf;
+  background-color: var(--pressed-state-color);
 }
 
 /* Secrtion 2 Main principles */
 
 .priciples {
+  background-color: var(--primary-background-color);
 }
 .principles-title {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  color: var(--main-title-color);
+  color: var(--dakr-overlays-headings);
 }
 .principles-text {
   font-size: 16px;
@@ -131,6 +135,7 @@ color: #FFFFFF;
 /* Section 3 What are we doing */
 
 .what {
+  background-color: var(--primary-background-color);
 }
 .what-title {
   font-weight: 700;
@@ -139,15 +144,12 @@ color: #FFFFFF;
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
-  color: var(--main-title-color);
-}
-.what-list {
-}
-.what-item {
+  color: var(--dakr-overlays-headings);
 }
 
 /* Section 4 Our Team */
 .team {
+   background-color: var(--light-bacground-color);
 }
 .team-head {
   font-weight: 700;
@@ -156,13 +158,11 @@ color: #FFFFFF;
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
-  color: var(--main-title-color);
+  color: var(--dakr-overlays-headings);
 }
-.team-list {
-}
-.list {
-}
+
 .team-item {
+  background-color: var(--primary-background-color);
 }
 .team-name {
   font-weight: 500;
@@ -170,77 +170,80 @@ color: #FFFFFF;
   line-height: 1.2;
   text-align: center;
   letter-spacing: 0.02em;
-  color: var(--main-title-color);
+  color: var(--dakr-overlays-headings);
 }
 .team-position {
   font-size: 16px;
   line-height: 1.5;
   text-align: center;
   letter-spacing: 0.02em;
-  color: var(--main-text-color);
+  color: var(--body-text-color);
 }
 
 /* Footer section */
 .footer {
-  color: #e7e9fc;
-  width: 1440px;
-  height: 310px;
-  left: 0px;
-  top: 2283px;
-  background: #2e2f42;
+  color: var(--accent-background-color);
+  background-color: var(--dakr-overlays-headings);
 }
 
 .footer-logo {
-  font-family: "Raleway";
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
   line-height: calc(24 / 18);
-  display: flex;
-  align-items: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: inherit;
 }
 .footer-logo > span {
-  color: #4d5ae5;
+  color: var(--primary-brand-color);
 }
 .footer-text {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
+/* Potrfolio.html */
+.solutions-portfolio {
+  background-color: var(--primary-background-color);
+}
 
+/* Section 1 Filters */
 .solutions-filter-btn {
+  font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.5;
-  display: flex;
-  align-items: center;
   text-align: center;
   letter-spacing: 0.04em;
-  color: #4d5ae5;
-  background: #f4f4fd;
+  color: var(--primary-brand-color);
+  background-color: var(--light-bacground-colorcolor);
+  cursor: pointer;
 }
 
 .solutions-filter-btn:hover,
 .solutions-filter-btn:focus {
-  color: #ffffff;
-  background: #404bbf;
+  color: var(--primary-background-color);
+  background-color: var(--pressed-state-color);
 }
+/* Subsection 1 cards */
 
-.solution-result-item {
+.solutions-result list {
+  background-color: var(--primary-background-color);
+}
+.solution-result-title {
   font-weight: 500;
   font-size: 20px;
-  line-height: 1.20;
+  line-height: 1.2;
   letter-spacing: 0.02em;
-  color: var(--main-title-color);
+  color: var(--dakr-overlays-headings);
 }
 
 .solution-result-text {
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.50;
+  line-height: 1.5;
   letter-spacing: 0.02em;
-  color: var(--main-text-color);
+  color: var(--body-text-color);
 }
